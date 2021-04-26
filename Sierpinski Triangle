@@ -1,3 +1,4 @@
+#Create a Sierpinski Triangle
 import numpy as np 
 import matplotlib.pyplot as plt
 
