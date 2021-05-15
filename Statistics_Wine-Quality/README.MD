@@ -1,0 +1,1 @@
+- T-test, multiple linear regression, and logistic regression on data about red wine.
