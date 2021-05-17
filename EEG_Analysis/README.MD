@@ -1,1 +1,3 @@
-- Please note that I'm still working on this. 
+- Data analysis to understand the characteristics of EEG data.
+- Created Morlet Wavelets
+- Convolution with Morley Wavelets to create a time-frequency plot (spectrogram)
