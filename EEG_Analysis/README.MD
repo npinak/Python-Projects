@@ -1,3 +1,3 @@
 - Data analysis to understand the characteristics of EEG data.
 - Created Morlet Wavelets
-- Convolution with Morlet Wavelets to create a time-frequency plot (spectrogram)
+- Convolution of time-series data with Morlet Wavelets to create a time-frequency plot (spectrogram)
