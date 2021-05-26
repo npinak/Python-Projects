@@ -1,1 +1,2 @@
-- Please note that I am still working on this project. 
+- Finding the entropy of written english.
+- To get more info on the project go to this url: https://cs.stanford.edu/people/eroberts/courses/soco/projects/1999-00/information-theory/entropy_of_english_9.html
