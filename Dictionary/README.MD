@@ -1,0 +1,2 @@
+- This script runs a dictionary program
+- Click on "Dictionary.py to see the script
