@@ -27,14 +27,26 @@ Height: %s m
 """
 
 # Can add multiple features to a feature group 
-fg = folium.FeatureGroup(name = "My Map") 
+fgv = folium.FeatureGroup(name = "Volcanoes") 
 
 # Adding markers
 for lt, ln, el, name in zip(lat, lon, elev, name):
     iframe = folium.IFrame(html=html % (name, name, el), width=200, height=100)
-    fg.add_child(folium.Marker(location=[lt, ln], popup=folium.Popup(iframe), icon = folium.Icon(color = color_producer(el))))
- 
-map.add_child(fg)
+    fgv.add_child(folium.CircleMarker(location=[lt, ln], radius = 6, popup=folium.Popup(iframe), fill_color= color_producer(el) ,color ='grey', fill_opacity=0.7 ))
 
+
+# Adding population data
+
+fgp = folium.FeatureGroup(name = "Population") 
+fgp.add_child(folium.GeoJson(data =open('/Users/pinaknayak/Documents/Github/Python-Projects/Web-Map_Volcanoes/Webmap_datasources/world 3.json', 'r', encoding='utf-8-sig').read(), 
+style_function=lambda x:{'fillColor':'green' if x['properties']['POP2005']<10000000 else 'orange' if 10000000 <= x['properties']['POP2005'] < 90000000 else 'red'}))
+
+# Adding a control panel for the layers
+
+
+
+map.add_child(fgv)
+map.add_child(fgp)
+map.add_child(folium.LayerControl())
 
 map.save("Map1.html")
