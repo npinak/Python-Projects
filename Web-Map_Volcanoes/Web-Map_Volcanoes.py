@@ -43,9 +43,9 @@ style_function=lambda x:{'fillColor':'green' if x['properties']['POP2005']<10000
 
 # Adding a control panel for the layers
 
-
-map.add_child(fgp)
 map.add_child(fgv)
+map.add_child(fgp)
+
 map.add_child(folium.LayerControl())
 
 map.save("Map1.html")
