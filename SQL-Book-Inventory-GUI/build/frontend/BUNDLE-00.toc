@@ -1,0 +1,3 @@
+([('frontend',
+   '/Users/pinaknayak/Documents/Github/Python-Projects/SQL-Book-Inventory-GUI/dist/frontend',
+   'EXECUTABLE')],)

@@ -69,5 +69,5 @@ connect()
 #print(search(Author="PK"))
 #print(search(Year=1997))
 
-update(1, 'Colonialism', 'PKE', 19974444, 1610)
-print(view_all())
+#update(1, 'Colonialism', 'PKE', 19974444, 1610)
+#print(view_all())
