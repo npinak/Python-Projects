@@ -18,6 +18,7 @@ def main():
     # Main program function
     room_list = list()
 
+    # Adding rooms to a list
     room = Room("You are in the foyer. To the north is the hall. To the east is the dining room. To the west is the guest bedroom",3,5,1,None)
     room_list.append(room)
     room = Room("You are in the guest bedroom. To the north is the master bedroom. To the east is the foyer.",2,0,None,None)
