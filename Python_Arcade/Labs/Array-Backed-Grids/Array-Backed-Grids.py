@@ -1,3 +1,13 @@
+''' Instructions for the lab can be found here:
+ https://learn.arcade.academy/en/latest/labs/lab_11_array_backed_grids/array_backed_grids.html
+
+ Part 1:
+ Start with the program at the end of Array-Backed Grids. Modify it so that rather than just changing
+ the block the user clicks on, also change the blocks of the squares next to the user’s click. (5 pts)
+ If the user clicks on an edge, make sure the program doesn’t crash and still handles the click appropriately. (5 pts)
+ '''
+
+
 import arcade
 
 
@@ -65,12 +75,36 @@ class MyGame(arcade.Window):
         elif button == arcade.MOUSE_BUTTON_RIGHT:
             print("Right mouse button pressed at", x, y)
 
-
-        if row < ROW_COUNT and column < COLUMN_COUNT:
-            if self.grid[row][column] == 0:
+        if self.grid[row][column] == 0:
                 self.grid[row][column] = 1
+        else:
+            self.grid[row][column] = 0
+
+        if row < ROW_COUNT - 1:
+            if self.grid[row + 1][column] == 0:
+                self.grid[row + 1][column] = 1
             else:
-                self.grid[row][column] = 0
+                self.grid[row + 1][column] = 0
+
+        if row > 0:
+            if self.grid[row - 1][column] == 0:
+                self.grid[row - 1][column] = 1
+            else:
+                self.grid[row - 1][column] = 0
+
+        if column < COLUMN_COUNT - 1:
+            if self.grid[row][column + 1] == 0:
+                self.grid[row][column + 1] = 1
+            else:
+                self.grid[row][column + 1] = 0
+
+        if column > 0:
+            if self.grid[row][column - 1] == 0:
+                self.grid[row][column - 1] = 1
+            else:
+                self.grid[row][column - 1] = 0
+
+
 
 
 def main():
