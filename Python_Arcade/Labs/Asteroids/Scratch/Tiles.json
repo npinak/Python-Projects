@@ -1,0 +1,1260 @@
+{ "columns":0,
+ "grid":
+    {
+     "height":1,
+     "orientation":"orthogonal",
+     "width":1
+    },
+ "margin":0,
+ "name":"Tiles",
+ "spacing":0,
+ "tilecount":207,
+ "tiledversion":"1.7.2",
+ "tileheight":576,
+ "tiles":[
+        {
+         "id":0,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/box.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":1,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/boxAlt.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":2,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/boxCoin_disabled.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":3,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/boxCoin.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":4,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/boxCoinAlt_disabled.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":5,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/boxCoinAlt.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":6,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/boxEmpty.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":7,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/boxExplosive_disabled.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":8,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/boxExplosive.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":9,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/boxExplosiveAlt.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":10,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/boxItem_disabled.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":11,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/boxItem.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":12,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/boxItemAlt_disabled.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":13,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/boxItemAlt.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":14,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/boxWarning.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":15,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/brickWall.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":16,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/bridge.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":17,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/bridgeLogs.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":18,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/castle.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":19,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/castleCenter_rounded.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":20,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/castleCenter.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":21,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/castleCliffLeft.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":22,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/castleCliffLeftAlt.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":23,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/castleCliffRight.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":24,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/castleCliffRightAlt.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":25,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/castleHalf.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":26,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/castleHalfLeft.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":27,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/castleHalfMid.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":28,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/castleHalfRight.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":29,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/castleHillLeft.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":30,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/castleHillLeft2.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":31,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/castleHillRight.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":32,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/castleHillRight2.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":33,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/castleLedgeLeft.png",
+         "imageheight":22,
+         "imagewidth":5
+        }, 
+        {
+         "id":34,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/castleLedgeRight.png",
+         "imageheight":22,
+         "imagewidth":5
+        }, 
+        {
+         "id":35,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/castleLeft.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":36,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/castleMid.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":37,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/castleRight.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":38,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/dirt.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":39,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/dirtCenter_rounded.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":40,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/dirtCenter.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":41,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/dirtCliffLeft.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":42,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/dirtCliffLeftAlt.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":43,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/dirtCliffRight.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":44,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/dirtCliffRightAlt.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":45,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/dirtHalf.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":46,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/dirtHalfLeft.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":47,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/dirtHalfMid.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":48,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/dirtHalfRight.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":49,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/dirtHillLeft.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":50,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/dirtHillLeft2.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":51,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/dirtHillRight.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":52,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/dirtHillRight2.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":53,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/dirtLedgeLeft.png",
+         "imageheight":18,
+         "imagewidth":5
+        }, 
+        {
+         "id":54,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/dirtLedgeRight.png",
+         "imageheight":18,
+         "imagewidth":5
+        }, 
+        {
+         "id":55,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/dirtLeft.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":56,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/dirtMid.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":57,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/dirtRight.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":58,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/door_closedMid.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":59,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/door_closedTop.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":60,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/door_openMid.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":61,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/door_openTop.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":62,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/fence.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":63,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/fenceBroken.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":64,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/grass.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":65,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/grassCenter_rounded.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":66,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/grassCenter.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":67,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/grassCliffLeft.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":68,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/grassCliffLeftAlt.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":69,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/grassCliffRight.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":70,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/grassCliffRightAlt.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":71,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/grassHalf.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":72,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/grassHalfLeft.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":73,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/grassHalfMid.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":74,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/grassHalfRight.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":75,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/grassHillLeft.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":76,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/grassHillLeft2.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":77,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/grassHillRight.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":78,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/grassHillRight2.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":79,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/grassLedgeLeft.png",
+         "imageheight":24,
+         "imagewidth":5
+        }, 
+        {
+         "id":80,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/grassLedgeRight.png",
+         "imageheight":24,
+         "imagewidth":5
+        }, 
+        {
+         "id":81,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/grassLeft.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":82,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/grassMid.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":83,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/grassRight.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":84,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/hill_large.png",
+         "imageheight":146,
+         "imagewidth":48
+        }, 
+        {
+         "id":85,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/hill_largeAlt.png",
+         "imageheight":146,
+         "imagewidth":48
+        }, 
+        {
+         "id":86,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/hill_small.png",
+         "imageheight":106,
+         "imagewidth":48
+        }, 
+        {
+         "id":87,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/hill_smallAlt.png",
+         "imageheight":106,
+         "imagewidth":48
+        }, 
+        {
+         "id":88,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/ladder_mid.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":89,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/ladder_top.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":90,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/liquidLava.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":91,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/liquidLavaTop_mid.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":92,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/liquidLavaTop.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":93,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/liquidWater.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":94,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/liquidWaterTop_mid.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":95,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/liquidWaterTop.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":96,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/lock_blue.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":97,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/lock_green.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":98,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/lock_red.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":99,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/lock_yellow.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":100,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/rockHillLeft.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":101,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/rockHillRight.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":102,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/ropeAttached.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":103,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/ropeHorizontal.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":104,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/ropeVertical.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":105,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/sand.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":106,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/sandCenter_rounded.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":107,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/sandCenter.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":108,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/sandCliffLeft.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":109,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/sandCliffLeftAlt.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":110,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/sandCliffRight.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":111,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/sandCliffRightAlt.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":112,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/sandHalf.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":113,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/sandHalfLeft.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":114,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/sandHalfMid.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":115,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/sandHalfRight.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":116,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/sandHillLeft.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":117,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/sandHillLeft2.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":118,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/sandHillRight.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":119,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/sandHillRight2.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":120,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/sandLedgeLeft.png",
+         "imageheight":18,
+         "imagewidth":5
+        }, 
+        {
+         "id":121,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/sandLedgeRight.png",
+         "imageheight":18,
+         "imagewidth":5
+        }, 
+        {
+         "id":122,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/sandLeft.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":123,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/sandMid.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":124,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/sandRight.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":125,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/sign.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":126,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/signExit.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":127,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/signLeft.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":128,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/signRight.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":129,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Tiles\/snow.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":130,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Player\/p1_duck.png",
+         "imageheight":71,
+         "imagewidth":69
+        }, 
+        {
+         "id":131,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Player\/p1_front.png",
+         "imageheight":92,
+         "imagewidth":66
+        }, 
+        {
+         "id":132,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Player\/p1_hurt.png",
+         "imageheight":92,
+         "imagewidth":69
+        }, 
+        {
+         "id":133,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Player\/p1_jump.png",
+         "imageheight":94,
+         "imagewidth":67
+        }, 
+        {
+         "id":134,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Player\/p1_spritesheet.png",
+         "imageheight":288,
+         "imagewidth":508
+        }, 
+        {
+         "id":135,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Player\/p1_stand.png",
+         "imageheight":92,
+         "imagewidth":66
+        }, 
+        {
+         "id":136,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Player\/p2_duck.png",
+         "imageheight":72,
+         "imagewidth":67
+        }, 
+        {
+         "id":137,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Player\/p2_front.png",
+         "imageheight":92,
+         "imagewidth":66
+        }, 
+        {
+         "id":138,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Player\/p2_hurt.png",
+         "imageheight":92,
+         "imagewidth":67
+        }, 
+        {
+         "id":139,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Player\/p2_jump.png",
+         "imageheight":94,
+         "imagewidth":66
+        }, 
+        {
+         "id":140,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Player\/p2_spritesheet.png",
+         "imageheight":282,
+         "imagewidth":494
+        }, 
+        {
+         "id":141,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Player\/p2_stand.png",
+         "imageheight":92,
+         "imagewidth":66
+        }, 
+        {
+         "id":142,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Player\/p3_duck.png",
+         "imageheight":71,
+         "imagewidth":69
+        }, 
+        {
+         "id":143,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Player\/p3_front.png",
+         "imageheight":92,
+         "imagewidth":66
+        }, 
+        {
+         "id":144,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Player\/p3_hurt.png",
+         "imageheight":92,
+         "imagewidth":69
+        }, 
+        {
+         "id":145,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Player\/p3_jump.png",
+         "imageheight":94,
+         "imagewidth":67
+        }, 
+        {
+         "id":146,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Player\/p3_spritesheet.png",
+         "imageheight":288,
+         "imagewidth":508
+        }, 
+        {
+         "id":147,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Player\/p3_stand.png",
+         "imageheight":92,
+         "imagewidth":66
+        }, 
+        {
+         "id":148,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/bomb.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":149,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/bombFlash.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":150,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/bush.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":151,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/buttonBlue_pressed.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":152,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/buttonBlue.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":153,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/buttonGreen_pressed.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":154,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/buttonGreen.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":155,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/buttonRed_pressed.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":156,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/buttonRed.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":157,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/buttonYellow_pressed.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":158,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/buttonYellow.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":159,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/cactus.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":160,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/chain.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":161,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/cloud1.png",
+         "imageheight":71,
+         "imagewidth":128
+        }, 
+        {
+         "id":162,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/cloud2.png",
+         "imageheight":71,
+         "imagewidth":129
+        }, 
+        {
+         "id":163,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/cloud3.png",
+         "imageheight":71,
+         "imagewidth":129
+        }, 
+        {
+         "id":164,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/coinBronze.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":165,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/coinGold.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":166,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/coinSilver.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":167,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/fireball.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":168,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/flagBlue.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":169,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/flagBlue2.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":170,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/flagBlueHanging.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":171,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/flagGreen.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":172,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/flagGreen2.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":173,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/flagGreenHanging.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":174,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/flagRed.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":175,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/flagRed2.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":176,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/flagRedHanging.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":177,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/flagYellow.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":178,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/flagYellow2.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":179,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/flagYellowHanging.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":180,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/gemBlue.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":181,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/gemGreen.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":182,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/gemRed.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":183,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/gemYellow.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":184,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/items_spritesheet.png",
+         "imageheight":576,
+         "imagewidth":576
+        }, 
+        {
+         "id":185,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/keyBlue.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":186,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/keyGreen.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":187,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/keyRed.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":188,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/keyYellow.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":189,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/mushroomBrown.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":190,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/mushroomRed.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":191,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/particleBrick1a.png",
+         "imageheight":14,
+         "imagewidth":19
+        }, 
+        {
+         "id":192,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/particleBrick1b.png",
+         "imageheight":21,
+         "imagewidth":21
+        }, 
+        {
+         "id":193,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/particleBrick2a.png",
+         "imageheight":14,
+         "imagewidth":19
+        }, 
+        {
+         "id":194,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/particleBrick2b.png",
+         "imageheight":21,
+         "imagewidth":21
+        }, 
+        {
+         "id":195,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/plant.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":196,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/plantPurple.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":197,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/rock.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":198,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/snowhill.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":199,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/spikes.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":200,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/springboardDown.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":201,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/springboardUp.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":202,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/star.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":203,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/switchLeft.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":204,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/switchMid.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":205,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/switchRight.png",
+         "imageheight":70,
+         "imagewidth":70
+        }, 
+        {
+         "id":206,
+         "image":"platformer-art-complete-pack-0\/Base pack\/Items\/weight.png",
+         "imageheight":70,
+         "imagewidth":70
+        }],
+ "tilewidth":576,
+ "type":"tileset",
+ "version":"1.6"
+}
