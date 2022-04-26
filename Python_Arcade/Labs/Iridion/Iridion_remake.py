@@ -17,6 +17,8 @@ REG_ENEMY_SPEED = 3
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 
+REG_ENEMY_RESPAWN = 5
+
 
 # Extras to add
 
@@ -24,18 +26,33 @@ SCREEN_HEIGHT = 600
 #̶ - A̶d̶d̶ b̶e̶t̶t̶e̶r̶ m̶o̶v̶e̶ b̶y̶ k̶e̶y̶b̶o̶a̶r̶d̶ (̶h̶t̶t̶p̶s̶:̶/̶/̶a̶p̶i̶.̶a̶r̶c̶a̶d̶e̶.̶a̶c̶a̶d̶e̶m̶y̶/̶e̶n̶/̶l̶a̶t̶e̶s̶t̶/̶e̶x̶a̶m̶p̶l̶e̶s̶/̶s̶p̶r̶i̶t̶e̶_̶m̶o̶v̶e̶_̶k̶e̶y̶b̶o̶a̶r̶d̶_̶b̶e̶t̶t̶e̶r̶.̶h̶t̶m̶l̶?̶h̶i̶g̶h̶l̶i̶g̶h̶t̶=̶k̶e̶y̶b̶o̶a̶r̶d̶)̶
 # - M̶a̶k̶e̶ e̶n̶e̶m̶i̶e̶s̶ s̶p̶a̶w̶n̶ a̶n̶d̶ f̶o̶l̶l̶o̶w̶ t̶h̶e̶ p̶l̶a̶y̶e̶r̶
     # - M̶a̶k̶e̶ e̶n̶e̶m̶i̶e̶s̶ s̶p̶a̶w̶n̶ a̶b̶o̶v̶e̶ t̶h̶e̶ s̶c̶r̶e̶e̶n̶ b̶o̶r̶d̶e̶r̶
-    # - Add respawning capability 
-    # - Add Pro Enemy
-    # - Make Enemies Shoot
+    # - A̶d̶d̶ r̶e̶s̶p̶a̶w̶n̶i̶n̶g̶ c̶a̶p̶a̶b̶i̶l̶i̶t̶y̶
+    # - Make Enemies Shoot 
     # - Make enemies stay above a certain line. 
     # - Make enemies crossover at screen border
     # - If enemy touches player it gets destroyed and the player loses health
+    # - Add Pro Enemy
+    # - Make enemy angle up to the player before shooting (backburner)
+        # - print(math.degrees(angle))
+        # - self.angle = angle #### Test Code #### - Gotta change from radians to deg
 # - Add a moving background 
 # - Make power-up 
 # - Make player ship crossover at screenborder 
 # - Give player healthbar 
 
 class Reg_Enemy(arcade.Sprite):
+
+    def __init__(self, filename, scale):
+        """ Set up the space ship. """
+
+        # Call the parent Sprite constructor
+        super().__init__(filename, scale)
+
+        self.bullet_list = arcade.SpriteList()
+
+    def setup(self):
+        
+        self.bullet_list = arcade.SpriteList()
 
     def follow_player(self, player_sprite):
 
@@ -63,6 +80,41 @@ class Reg_Enemy(arcade.Sprite):
             # and change_y. Velocity is how fast the bullet travels.
             self.change_x = math.cos(angle) * REG_ENEMY_SPEED
             self.change_y = math.sin(angle) * REG_ENEMY_SPEED
+
+    def shoot(self, player_sprite):
+
+        print(len(self.bullet_list))
+        self.bullet_list.draw()
+        
+        # Random 1 in 100 chance that we'll change from our old direction and
+        # then re-aim toward the player
+        if random.randrange(100) == 0:
+            start_x = self.center_x
+            start_y = self.center_y
+
+            # Get the destination location for the bullet
+            dest_x = player_sprite.center_x
+            dest_y = player_sprite.center_y
+
+            # Do math to calculate how to get the bullet to the destination.
+            # Calculation the angle in radians between the start points
+            # and end points. This is the angle the bullet will travel.
+            x_diff = dest_x - start_x
+            y_diff = dest_y - start_y
+            angle = math.atan2(y_diff, x_diff)
+
+            bullet_sprite = arcade.Sprite("/Users/pinaknayak/Documents/Github/Python-Projects/"
+                                          "Python_Arcade/Labs/Iridion/Game_Assets/Active_use/Lasers/Laser_01.png",
+                                          SPRITE_SCALING_PLAYER)
+            bullet_sprite.center_x = self.center_x
+            bullet_sprite.center_y = self.center_y
+            bullet_sprite.change_y = -math.cos(math.radians(player_sprite.angle)) * BULLET_SPEED
+            bullet_sprite.change_x = math.sin(math.radians(player_sprite.angle)) * BULLET_SPEED
+            bullet_sprite.angle = player_sprite.angle
+            self.bullet_list.append(bullet_sprite) #### Figure out why bullets are not being drawn. ####
+            
+        
+
 
 class Player(arcade.Sprite):
 
@@ -140,7 +192,7 @@ class MyGame(arcade.Window):
             enemy = Reg_Enemy("/Users/pinaknayak/Documents/Github/Python-Projects/Python_Arcade/Labs/"
                                   "Iridion/Game_Assets/Active_use/Enemies/Turrent_01.png",SPRITE_SCALING_PLAYER)
             enemy.center_x = random.randrange(SCREEN_WIDTH)
-            enemy.center_y = random.randrange(SCREEN_HEIGHT, SCREEN_HEIGHT + 20)
+            enemy.center_y = random.randrange(SCREEN_HEIGHT + 10, SCREEN_HEIGHT + 100)
             self.enemy_list.append(enemy)
 
         # Set the background color
@@ -162,6 +214,15 @@ class MyGame(arcade.Window):
 
         # Render the text
         arcade.draw_text(f"Score: {self.score}", 10, 20, arcade.color.WHITE, 14)
+
+    def reg_enemy_respawn(self):
+
+        for enemy in range(REG_ENEMY_RESPAWN):
+            enemy = Reg_Enemy("/Users/pinaknayak/Documents/Github/Python-Projects/Python_Arcade/Labs/"
+                                  "Iridion/Game_Assets/Active_use/Enemies/Turrent_01.png",SPRITE_SCALING_PLAYER)
+            enemy.center_x = random.randrange(SCREEN_WIDTH)
+            enemy.center_y = random.randrange(SCREEN_HEIGHT + 30, SCREEN_HEIGHT + 200)
+            self.enemy_list.append(enemy)
 
 
     def on_key_press(self, key, modifiers):
@@ -237,8 +298,6 @@ class MyGame(arcade.Window):
     def update(self, delta_time):
         """ Movement and game logic """
 
-        print(self.player_sprite)
-
         # Call update on all sprites
         self.coin_list.update()
         self.player_list.update()
@@ -259,6 +318,12 @@ class MyGame(arcade.Window):
 
         for enemy in self.enemy_list:
             enemy.follow_player(self.player_sprite)
+            enemy.shoot(self.player_sprite)
+
+        # Respawn more regular enemies if number falls below 6
+
+        if (len(self.enemy_list) < 6):
+            self.reg_enemy_respawn()
 
 
 def main():
