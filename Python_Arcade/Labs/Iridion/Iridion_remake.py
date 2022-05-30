@@ -40,7 +40,7 @@ OFFSCREEN_SPACE = 300
     # - Add Pro Enemy
 # - Add a moving background
 # - Make power-up 
-# - Make player ship crossover at screenborder 
+# - M̶a̶k̶e̶ p̶l̶a̶y̶e̶r̶ s̶h̶i̶p̶ c̶r̶o̶s̶s̶o̶v̶e̶r̶ a̶t̶ s̶c̶r̶e̶e̶n̶b̶o̶r̶d̶e̶r̶ 
 # - Give player healthbar 
     # - Subtract player health when bullet hits 
 # - Make a menu screen 
@@ -169,10 +169,10 @@ class Player(arcade.Sprite):
         self.center_y += self.change_y
 
         # Check for out-of-bounds
-        if self.center_x < 0:
-            self.center_x = SCREEN_WIDTH
-        elif self.center_x > SCREEN_WIDTH:
-            self.center_x = 0
+        if self.left < 0:
+            self.left = 0
+        elif self.right > SCREEN_WIDTH - 1:
+            self.right = SCREEN_WIDTH - 1
 
         if self.bottom < 0:
             self.bottom = 0
@@ -375,6 +375,19 @@ class MyGame(arcade.Window):
         # Respawn more regular enemies if number falls below 6
         if (len(self.enemy_list) < 6):
             self.reg_enemy_respawn()
+
+        # Moving the player to the otherside of the screen if they go out-of-bounds
+        # Check for out-of-bounds
+        if self.player_sprite.center_x < 0:
+            self.player_sprite.center_x = SCREEN_WIDTH
+        elif self.player_sprite.center_x > SCREEN_WIDTH:
+            self.player_sprite.center_x = 0
+
+        if self.player_sprite.center_y < 0:
+            self.player_sprite.center_y = SCREEN_HEIGHT
+        elif self.player_sprite.center_y > SCREEN_HEIGHT:
+            self.player_sprite.center_y = 0
+
 
 
 def main():
