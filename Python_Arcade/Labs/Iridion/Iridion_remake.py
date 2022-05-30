@@ -5,20 +5,23 @@ import math
 
 SPRITE_SCALING_PLAYER = 0.5
 SPRITE_SCALING_COIN = 0.2
-SPRITE_SCALING_LASER = 0.8
+SPRITE_SCALING_LASER = 0.4
+ENEMY_SCALING_LASER = 0.4
 
 COIN_COUNT = 50
 ENEMY_COUNT = 10
 
 MOVEMENT_SPEED = 5
 TURN_SPEED  = 5
-BULLET_SPEED = 5
+BULLET_SPEED = 8
 REG_ENEMY_SPEED = 3
 
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 
 REG_ENEMY_RESPAWN = 5
+
+OFFSCREEN_SPACE = 300
 
 
 # Todo List
@@ -28,21 +31,19 @@ REG_ENEMY_RESPAWN = 5
 # - M̶a̶k̶e̶ e̶n̶e̶m̶i̶e̶s̶ s̶p̶a̶w̶n̶ a̶n̶d̶ f̶o̶l̶l̶o̶w̶ t̶h̶e̶ p̶l̶a̶y̶e̶r̶
     # - M̶a̶k̶e̶ e̶n̶e̶m̶i̶e̶s̶ s̶p̶a̶w̶n̶ a̶b̶o̶v̶e̶ t̶h̶e̶ s̶c̶r̶e̶e̶n̶ b̶o̶r̶d̶e̶r̶
     # - A̶d̶d̶ r̶e̶s̶p̶a̶w̶n̶i̶n̶g̶ c̶a̶p̶a̶b̶i̶l̶i̶t̶y̶
-    # - Make Enemies Shoot
-    #   - Make enemies aim at the player
-    #   - Make enemies shoot independently of each other 
-    # - Make Enemy turn to face the player at a certain speed
-    # - Make enemies stay above a certain line. 
+    # - M̶a̶k̶e̶ E̶n̶e̶m̶i̶e̶s̶ S̶h̶o̶o̶t̶
+    #̶   -̶ M̶a̶k̶e̶ e̶n̶e̶m̶i̶e̶s̶ a̶i̶m̶ a̶t̶ t̶h̶e̶ p̶l̶a̶y̶e̶r̶
+    #̶   -̶ M̶a̶k̶e̶ e̶n̶e̶m̶i̶e̶s̶ s̶h̶o̶o̶t̶ i̶n̶d̶e̶p̶e̶n̶d̶e̶n̶t̶l̶y̶ o̶f̶ e̶a̶c̶h̶ o̶t̶h̶e̶r̶ 
+    # -̶ M̶a̶k̶e̶ E̶n̶e̶m̶y̶ t̶u̶r̶n̶ t̶o̶ f̶a̶c̶e̶ t̶h̶e̶ p̶l̶a̶y̶e̶r̶ a̶t̶ a̶ c̶e̶r̶t̶a̶i̶n̶ s̶p̶e̶e̶d̶ 
     # - Make enemies crossover at screen border
     # - If enemy touches player it gets destroyed and the player loses health
     # - Add Pro Enemy
-    # - Make enemy angle up to the player before shooting (backburner)
-        # - print(math.degrees(angle))
-        # - self.angle = angle #### Test Code #### - Gotta change from radians to deg
-# - Add a moving background 
+# - Add a moving background
 # - Make power-up 
 # - Make player ship crossover at screenborder 
 # - Give player healthbar 
+    # - Subtract player health when bullet hits 
+# - Make a menu screen 
 
 class Reg_Enemy(arcade.Sprite):
 
@@ -90,8 +91,23 @@ class Reg_Enemy(arcade.Sprite):
             self.change_x = math.cos(angle) * REG_ENEMY_SPEED
             self.change_y = math.sin(angle) * REG_ENEMY_SPEED
 
-    def on_update(self, delta_time: float = 1 / 60): #### This entire method is a test 
-        """ Update this sprite. """
+    def on_update(self, player_sprite, player_list, delta_time: float = 1 / 60): #### Added player_list 
+        """ Update this sprite. """ # What does delta_time: float = 1 / 60 mean? Ask Prof. Craven ####
+
+        # Getting Enemy's position
+        start_x = self.center_x
+        start_y = self.center_y
+
+        # Getting the Player's position
+        dest_x = player_sprite.center_x
+        dest_y = player_sprite.center_y
+
+        # Get differences between enemy and player position
+        x_diff = dest_x - start_x
+        y_diff = dest_y - start_y
+
+        # Calculate angle between enemy and player
+        angle = math.atan2(y_diff, x_diff)
 
         # Track time since we last fired
         self.time_since_last_firing += delta_time
@@ -103,14 +119,44 @@ class Reg_Enemy(arcade.Sprite):
             self.time_since_last_firing = 0
 
             # Fire the bullet
-            bullet = arcade.Sprite(":resources:images/space_shooter/laserBlue01.png")
+            bullet = arcade.Sprite(":resources:images/space_shooter/laserBlue01.png",
+            scale = ENEMY_SCALING_LASER) 
             bullet.center_x = self.center_x
-            bullet.angle = -90
+            bullet.angle = math.degrees(angle)
             bullet.top = self.bottom
-            bullet.change_y = -2
+            bullet.change_x = math.cos(angle) * REG_ENEMY_SPEED
+            bullet.change_y = math.sin(angle) * REG_ENEMY_SPEED
             self.enemy_bullet_list.append(bullet)
     
-        
+        # Bullet Collision Detection. Need to add health and subtract 
+        for bullet in self.enemy_bullet_list:
+
+            # Check this bullet to see if it hit a coin
+            hit_list = arcade.check_for_collision_with_list(bullet, player_list)
+
+            # If it did, get rid of the bullet
+            if len(hit_list) > 0:
+                bullet.remove_from_sprite_lists()
+
+
+        # Getting Enemy's position
+        start_x = self.center_x
+        start_y = self.center_y
+
+        # Getting the Player's position
+        dest_x = player_sprite.center_x
+        dest_y = player_sprite.center_y
+
+        # Get differences between enemy and player position
+        x_diff = dest_x - start_x
+        y_diff = dest_y - start_y
+
+        # Calculate angle between enemy and player
+        angle = math.atan2(y_diff, x_diff)
+
+        # Making the enemy face the player
+        self.angle = math.degrees(angle) - 90
+
 
 
 class Player(arcade.Sprite):
@@ -123,10 +169,10 @@ class Player(arcade.Sprite):
         self.center_y += self.change_y
 
         # Check for out-of-bounds
-        if self.left < 0:
-            self.left = 0
-        elif self.right > SCREEN_WIDTH - 1:
-            self.right = SCREEN_WIDTH - 1
+        if self.center_x < 0:
+            self.center_x = SCREEN_WIDTH
+        elif self.center_x > SCREEN_WIDTH:
+            self.center_x = 0
 
         if self.bottom < 0:
             self.bottom = 0
@@ -139,7 +185,7 @@ class MyGame(arcade.Window):
     def __init__(self):
         """ Initializer """
         # Call the parent class initializer
-        super().__init__(SCREEN_WIDTH, SCREEN_HEIGHT, "Sprites and Bullets Demo")
+        super().__init__(SCREEN_WIDTH, SCREEN_HEIGHT, "Iridion Remake")
 
         # Variables that will hold sprite lists
         self.player_list = None
@@ -188,10 +234,11 @@ class MyGame(arcade.Window):
 
         # Setting up the enemies and adding them to a list
         for enemy in range(ENEMY_COUNT):
+            time_between_firing = random.uniform(5,10)
             enemy = Reg_Enemy("/Users/pinaknayak/Documents/Github/Python-Projects/Python_Arcade/Labs/"
                                   "Iridion/Game_Assets/Active_use/Enemies/Turrent_01.png",SPRITE_SCALING_PLAYER,
                                   enemy_bullet_list = self.enemy_bullet_list,####
-                                  time_between_firing = 2.0) ####
+                                  time_between_firing = time_between_firing) ####
             enemy.center_x = random.randrange(SCREEN_WIDTH)
             enemy.center_y = random.randrange(SCREEN_HEIGHT + 10, SCREEN_HEIGHT + 100)
             self.enemy_list.append(enemy)
@@ -215,13 +262,15 @@ class MyGame(arcade.Window):
         self.enemy_bullet_list.draw() ####
 
         # Render the text
-        arcade.draw_text(f"Score: {self.score}", 10, 20, arcade.color.WHITE, 14)
+        arcade.draw_text(f"Health: | Score: {self.score}", 10, 20, arcade.color.WHITE, 14)
 
     def reg_enemy_respawn(self):
 
         for enemy in range(REG_ENEMY_RESPAWN):
             enemy = Reg_Enemy("/Users/pinaknayak/Documents/Github/Python-Projects/Python_Arcade/Labs/"
-                                  "Iridion/Game_Assets/Active_use/Enemies/Turrent_01.png",SPRITE_SCALING_PLAYER)
+                                  "Iridion/Game_Assets/Active_use/Enemies/Turrent_01.png", SPRITE_SCALING_PLAYER,
+                                  enemy_bullet_list = self.enemy_bullet_list,####
+                                  time_between_firing = random.uniform(5,10)) ####
             enemy.center_x = random.randrange(SCREEN_WIDTH)
             enemy.center_y = random.randrange(SCREEN_HEIGHT + 30, SCREEN_HEIGHT + 200)
             self.enemy_list.append(enemy)
@@ -304,13 +353,15 @@ class MyGame(arcade.Window):
         self.coin_list.update()
         self.player_list.update()
         self.bullet_list.update()
-        self.enemy_bullet_list.update() ####
-        self.enemy_list.on_update(delta_time)
+        self.enemy_bullet_list.update() #### Update Enemy_bullet_list to move the enemy bullets 
+
+        for enemy in self.enemy_list:
+            enemy.on_update(self.player_sprite, self.player_list, delta_time)
+
 
         for bullet in self.bullet_list:
             hit_list = arcade.check_for_collision_with_list(bullet, self.enemy_list)
             if len(hit_list) > 0:
-                #### print(hit_list[0]) ####
                 bullet.remove_from_sprite_lists()
             for enemy in hit_list:
                 enemy.remove_from_sprite_lists()
@@ -318,14 +369,9 @@ class MyGame(arcade.Window):
                 bullet.remove_from_sprite_lists()
 
         # Calling follow player for regular enemy
-
         for enemy in self.enemy_list:
             enemy.follow_player(self.player_sprite)
-        
-        self.enemy_bullet_list.update() ####
     
-        
-
         # Respawn more regular enemies if number falls below 6
         if (len(self.enemy_list) < 6):
             self.reg_enemy_respawn()
