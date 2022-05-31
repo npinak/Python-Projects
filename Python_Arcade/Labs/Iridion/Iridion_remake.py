@@ -35,15 +35,13 @@ OFFSCREEN_SPACE = 300
     #̶   -̶ M̶a̶k̶e̶ e̶n̶e̶m̶i̶e̶s̶ a̶i̶m̶ a̶t̶ t̶h̶e̶ p̶l̶a̶y̶e̶r̶
     #̶   -̶ M̶a̶k̶e̶ e̶n̶e̶m̶i̶e̶s̶ s̶h̶o̶o̶t̶ i̶n̶d̶e̶p̶e̶n̶d̶e̶n̶t̶l̶y̶ o̶f̶ e̶a̶c̶h̶ o̶t̶h̶e̶r̶ 
     # -̶ M̶a̶k̶e̶ E̶n̶e̶m̶y̶ t̶u̶r̶n̶ t̶o̶ f̶a̶c̶e̶ t̶h̶e̶ p̶l̶a̶y̶e̶r̶ a̶t̶ a̶ c̶e̶r̶t̶a̶i̶n̶ s̶p̶e̶e̶d̶ 
-    # - Make enemies crossover at screen border
     # - If enemy touches player it gets destroyed and the player loses health
-    # - Add Pro Enemy
 # - Add a moving background
 # - Make power-up 
 # - M̶a̶k̶e̶ p̶l̶a̶y̶e̶r̶ s̶h̶i̶p̶ c̶r̶o̶s̶s̶o̶v̶e̶r̶ a̶t̶ s̶c̶r̶e̶e̶n̶b̶o̶r̶d̶e̶r̶ 
 # - Give player healthbar 
     # - Subtract player health when bullet hits 
-# - Make a menu screen 
+# - M̶a̶k̶e̶ a̶ m̶e̶n̶u̶ s̶c̶r̶e̶e̶n̶ 
 
 class Reg_Enemy(arcade.Sprite):
 
@@ -51,13 +49,13 @@ class Reg_Enemy(arcade.Sprite):
         """ Set up the enemy """
         super().__init__(image_file, scale)
 
-        # How long has it been since we last fired?
+        # How long has it been since we last fired? ####
         self.time_since_last_firing = 0.0
 
-        # How often do we fire?
+        # Time Between Firing
         self.time_between_firing = time_between_firing
 
-        # When we fire, what list tracks the bullets?
+        # Keep Track of Bullets
         self.enemy_bullet_list = enemy_bullet_list
 
     def setup(self):
@@ -93,6 +91,8 @@ class Reg_Enemy(arcade.Sprite):
 
     def on_update(self, player_sprite, player_list, delta_time: float = 1 / 60): #### Added player_list 
         """ Update this sprite. """ # What does delta_time: float = 1 / 60 mean? Ask Prof. Craven ####
+
+        
 
         # Getting Enemy's position
         start_x = self.center_x
@@ -134,9 +134,11 @@ class Reg_Enemy(arcade.Sprite):
             # Check this bullet to see if it hit a coin
             hit_list = arcade.check_for_collision_with_list(bullet, player_list)
 
+
             # If it did, get rid of the bullet
             if len(hit_list) > 0:
                 bullet.remove_from_sprite_lists()
+                self.window.GameView.player_health()
 
 
         # Getting Enemy's position
@@ -179,27 +181,27 @@ class Player(arcade.Sprite):
         elif self.top > SCREEN_HEIGHT - 1:
             self.top = SCREEN_HEIGHT - 1
 
-class MyGame(arcade.Window):
+class GameView(arcade.View):
     """ Main application class. """
 
     def __init__(self):
         """ Initializer """
         # Call the parent class initializer
-        super().__init__(SCREEN_WIDTH, SCREEN_HEIGHT, "Iridion Remake")
+        super().__init__()
 
         # Variables that will hold sprite lists
         self.player_list = None
         self.enemy_list = None
         self.coin_list = None
         self.bullet_list = None
-        self.enemy_bullet_list = None ####
+        self.enemy_bullet_list = None
 
         # Set up the player info
         self.player_sprite = None
         self.score = 0
 
         # Don't show the mouse cursor
-        self.set_mouse_visible(False)
+        self.window.set_mouse_visible(False)
 
         # Track the current state of what key is pressed
         self.left_pressed = False
@@ -222,6 +224,7 @@ class MyGame(arcade.Window):
         self.enemy_bullet_list = arcade.SpriteList() ####
         # Set up the player
         self.score = 0
+        self.player_health = 100
 
         # Setting up the Player Sprite. Image from kenney.nl
         self.player_sprite = arcade.Sprite("/Users/pinaknayak/Documents/Github/Python-Projects/Python_Arcade/Labs/"
@@ -237,8 +240,8 @@ class MyGame(arcade.Window):
             time_between_firing = random.uniform(5,10)
             enemy = Reg_Enemy("/Users/pinaknayak/Documents/Github/Python-Projects/Python_Arcade/Labs/"
                                   "Iridion/Game_Assets/Active_use/Enemies/Turrent_01.png",SPRITE_SCALING_PLAYER,
-                                  enemy_bullet_list = self.enemy_bullet_list,####
-                                  time_between_firing = time_between_firing) ####
+                                  enemy_bullet_list = self.enemy_bullet_list,
+                                  time_between_firing = time_between_firing) 
             enemy.center_x = random.randrange(SCREEN_WIDTH)
             enemy.center_y = random.randrange(SCREEN_HEIGHT + 10, SCREEN_HEIGHT + 100)
             self.enemy_list.append(enemy)
@@ -255,14 +258,13 @@ class MyGame(arcade.Window):
         arcade.start_render()
 
         # Draw all the sprites.
-        self.coin_list.draw()
         self.player_list.draw()
         self.enemy_list.draw()
         self.bullet_list.draw()
         self.enemy_bullet_list.draw() ####
 
         # Render the text
-        arcade.draw_text(f"Health: | Score: {self.score}", 10, 20, arcade.color.WHITE, 14)
+        arcade.draw_text(f"Health: {self.player_health} | Score: {self.score}", 10, 20, arcade.color.WHITE, 14)
 
     def reg_enemy_respawn(self):
 
@@ -274,6 +276,10 @@ class MyGame(arcade.Window):
             enemy.center_x = random.randrange(SCREEN_WIDTH)
             enemy.center_y = random.randrange(SCREEN_HEIGHT + 30, SCREEN_HEIGHT + 200)
             self.enemy_list.append(enemy)
+
+    def player_health(self):
+
+        self.player_health = self.player_health - 20
 
 
     def on_key_press(self, key, modifiers):
@@ -350,7 +356,6 @@ class MyGame(arcade.Window):
         """ Movement and game logic """
 
         # Call update on all sprites
-        self.coin_list.update()
         self.player_list.update()
         self.bullet_list.update()
         self.enemy_bullet_list.update() #### Update Enemy_bullet_list to move the enemy bullets 
@@ -389,10 +394,43 @@ class MyGame(arcade.Window):
             self.player_sprite.center_y = 0
 
 
+class MenuView(arcade.View):
+    def on_show_view(self):
+        arcade.set_background_color(arcade.color.COOL_BLACK)
+
+    def on_draw(self):
+        self.clear()
+        arcade.draw_text("Instructions", SCREEN_WIDTH / 2, SCREEN_HEIGHT - 100,
+                         arcade.color.GRAY, font_size=50, anchor_x="center")
+
+        arcade.draw_text("Up-Arrow = Forward",SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 + 150,
+         arcade.color.DUTCH_WHITE,font_size=20, anchor_x="center")
+        arcade.draw_text("Down-Arrow = Backward", SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 + 100,
+                         arcade.color.DUTCH_WHITE, font_size=20, anchor_x="center")
+        arcade.draw_text("Left-Arrow = Left", SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 + 50,
+                         arcade.color.DUTCH_WHITE, font_size=20, anchor_x="center")
+        arcade.draw_text("Right-Arrow = Right", SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2,
+                         arcade.color.DUTCH_WHITE, font_size=20, anchor_x="center")
+        arcade.draw_text("Z = Turn Counter-Clockwise", SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 -  50,
+                         arcade.color.DUTCH_WHITE, font_size=20, anchor_x="center")
+        arcade.draw_text("X = Turn Clockwise", SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - 100,
+                         arcade.color.DUTCH_WHITE, font_size=20, anchor_x="center")
+        arcade.draw_text("Space = Shoot", SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - 150,
+                         arcade.color.DUTCH_WHITE, font_size=20, anchor_x="center")
+
+        arcade.draw_text("Click to advance.", SCREEN_WIDTH / 2, 75,
+                         arcade.color.GRAY, font_size=20, anchor_x="center")
+
+    def on_mouse_press(self, _x, _y, _button, _modifiers):
+        game = GameView()
+        self.window.show_view(game)
+        game.setup()
+
 
 def main():
-    window = MyGame()
-    window.setup()
+    window = arcade.Window(SCREEN_WIDTH, SCREEN_HEIGHT, "Iridion Remake")
+    start_view = MenuView()
+    window.show_view(start_view)
     arcade.run()
 
 
