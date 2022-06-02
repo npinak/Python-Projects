@@ -24,20 +24,6 @@ REG_ENEMY_RESPAWN = 5
 OFFSCREEN_SPACE = 300
 
 
-# Todo List
-
-#̶ - A̶d̶d̶ b̶e̶t̶t̶e̶r̶ m̶o̶v̶e̶ b̶y̶ k̶e̶y̶b̶o̶a̶r̶d̶ (̶h̶t̶t̶p̶s̶:̶/̶/̶a̶p̶i̶.̶a̶r̶c̶a̶d̶e̶.̶a̶c̶a̶d̶e̶m̶y̶/̶e̶n̶/̶l̶a̶t̶e̶s̶t̶/̶e̶x̶a̶m̶p̶l̶e̶s̶/̶s̶p̶r̶i̶t̶e̶_̶m̶o̶v̶e̶_̶k̶e̶y̶b̶o̶a̶r̶d̶_̶b̶e̶t̶t̶e̶r̶.̶h̶t̶m̶l̶?̶h̶i̶g̶h̶l̶i̶g̶h̶t̶=̶k̶e̶y̶b̶o̶a̶r̶d̶)̶
-# - M̶a̶k̶e̶ e̶n̶e̶m̶i̶e̶s̶ s̶p̶a̶w̶n̶ a̶n̶d̶ f̶o̶l̶l̶o̶w̶ t̶h̶e̶ p̶l̶a̶y̶e̶r̶
-    # - M̶a̶k̶e̶ e̶n̶e̶m̶i̶e̶s̶ s̶p̶a̶w̶n̶ a̶b̶o̶v̶e̶ t̶h̶e̶ s̶c̶r̶e̶e̶n̶ b̶o̶r̶d̶e̶r̶
-    # - A̶d̶d̶ r̶e̶s̶p̶a̶w̶n̶i̶n̶g̶ c̶a̶p̶a̶b̶i̶l̶i̶t̶y̶
-    # - M̶a̶k̶e̶ E̶n̶e̶m̶i̶e̶s̶ S̶h̶o̶o̶t̶
-    #̶   -̶ M̶a̶k̶e̶ e̶n̶e̶m̶i̶e̶s̶ a̶i̶m̶ a̶t̶ t̶h̶e̶ p̶l̶a̶y̶e̶r̶
-    #̶   -̶ M̶a̶k̶e̶ e̶n̶e̶m̶i̶e̶s̶ s̶h̶o̶o̶t̶ i̶n̶d̶e̶p̶e̶n̶d̶e̶n̶t̶l̶y̶ o̶f̶ e̶a̶c̶h̶ o̶t̶h̶e̶r̶ 
-    # -̶ M̶a̶k̶e̶ E̶n̶e̶m̶y̶ t̶u̶r̶n̶ t̶o̶ f̶a̶c̶e̶ t̶h̶e̶ p̶l̶a̶y̶e̶r̶ a̶t̶ a̶ c̶e̶r̶t̶a̶i̶n̶ s̶p̶e̶e̶d̶ 
-# - A̶d̶d̶ a̶ b̶a̶c̶k̶g̶r̶o̶u̶n̶d̶
-# - M̶a̶k̶e̶ p̶l̶a̶y̶e̶r̶ s̶h̶i̶p̶ c̶r̶o̶s̶s̶o̶v̶e̶r̶ a̶t̶ s̶c̶r̶e̶e̶n̶b̶o̶r̶d̶e̶r̶ 
-# - M̶a̶k̶e̶ a̶ m̶e̶n̶u̶ s̶c̶r̶e̶e̶n̶ 
-
 class Reg_Enemy(arcade.Sprite, arcade.View):
 
     def __init__(self, image_file, scale, enemy_bullet_list, time_between_firing):
@@ -84,11 +70,11 @@ class Reg_Enemy(arcade.Sprite, arcade.View):
         """ Update this sprite. """ 
 
     
-        # Getting Enemy's position
+        # Get Enemy's position
         start_x = self.center_x
         start_y = self.center_y
 
-        # Getting the Player's position
+        # Get the Player's position
         dest_x = player_sprite.center_x
         dest_y = player_sprite.center_y
 
@@ -131,11 +117,11 @@ class Reg_Enemy(arcade.Sprite, arcade.View):
                 view = GameOverView()
                 self.window.show_view(view)
 
-        # Getting Enemy's position
+        # Get Enemy's position
         start_x = self.center_x
         start_y = self.center_y
 
-        # Getting the Player's position
+        # Get the Player's position
         dest_x = player_sprite.center_x
         dest_y = player_sprite.center_y
 
